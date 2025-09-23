@@ -1,0 +1,292 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 -- phpMyAdmin SQL Dump\
+-- version 4.9.3\
+-- https://www.phpmyadmin.net/\
+--\
+-- Host: localhost:8889\
+-- Generation Time: Sep 09, 2025 at 07:42 AM\
+-- Server version: 5.7.26\
+-- PHP Version: 7.4.2\
+\
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";\
+SET time_zone = "+00:00";\
+\
+--\
+-- Database: `supercar`\
+--\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `contact`\
+--\
+\
+CREATE TABLE `contact` (\
+  `id` int(100) NOT NULL,\
+  `nom` varchar(100) NOT NULL,\
+  `email` varchar(100) NOT NULL,\
+  `objet` varchar(100) NOT NULL,\
+  `message` varchar(400) NOT NULL,\
+  `statut` enum('non lu','lu') NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;\
+\
+--\
+-- Dumping data for table `contact`\
+--\
+\
+INSERT INTO `contact` (`id`, `nom`, `email`, `objet`, `message`, `statut`) VALUES\
+(1, 'delnah', 'delnah@gmail.com', 'Livraison', 'Good', 'non lu'),\
+(2, 'Anwell', 'antsolalainaanwell@gmail.com', 'Livraison', 'Merci.Beaucoup', 'non lu'),\
+(3, 'Eddia', 'eddia@gmail.com', 'Livraison', 'Merci je suis satisfait', 'non lu'),\
+(4, '', '', '', '', 'non lu'),\
+(5, 'Karol', 'karol@gmail.com', 'Bonne remarque', 'Tr\'e8s bon service de livraison et bonnes conseils ', 'non lu'),\
+(6, 'Anwell', 'antsolalainaanwell@gmail.com', 'Livraison', 'C\\'est une livraison', 'non lu'),\
+(7, 'Inconnu', 'inconnu@gmail.com', 'Remarque', 'J\\'ai le seum', 'non lu'),\
+(8, 'Inconnune', 'inconnune@gmmail.com', 'Remarque', 'J\\'ai une remarque ', 'non lu'),\
+(9, 'Anwell', 'antsolalainaanwell@gmail.com', 'Livraison', 'C\\'est un test', 'lu');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `essai`\
+--\
+\
+CREATE TABLE `essai` (\
+  `id` int(20) NOT NULL,\
+  `nom` varchar(100) NOT NULL,\
+  `email` varchar(100) NOT NULL,\
+  `marque` varchar(100) NOT NULL,\
+  `date_essai` varchar(100) NOT NULL,\
+  `heure_essai` time NOT NULL,\
+  `statut` enum('En attente','Approuv\'e9e','Refus\'e9e') NOT NULL DEFAULT 'En attente'\
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;\
+\
+--\
+-- Dumping data for table `essai`\
+--\
+\
+INSERT INTO `essai` (`id`, `nom`, `email`, `marque`, `date_essai`, `heure_essai`, `statut`) VALUES\
+(4, 'Anwell', 'antsolalainaanwell@gmail.com', '', '2025-03-25', '00:00:00', 'En attente'),\
+(5, 'Anwell', 'antsolalainaanwell@gmail.com', '', '2025-03-29', '00:00:00', 'Approuv\'e9e'),\
+(6, 'Anwell', 'antsolalainaanwell@gmail.com', '', '2025-03-29', '00:00:00', 'Approuv\'e9e'),\
+(7, 'Kenny Antonitti', 'kenny@gmail.com', 'BMW X5', '2025-04-10', '00:00:00', 'En attente'),\
+(8, 'Anwell', 'antsolalainaanwell@gmail.com', 'Audi A3', '2025-04-24', '00:00:00', 'En attente'),\
+(29, 'Irda', 'irda@gmail.com', 'BMW', '2025-04-24', '00:00:00', 'En attente'),\
+(30, 'Landy', 'peniela@gmail.com', 'BMW', '2025-04-23', '00:00:00', 'En attente'),\
+(31, 'Landy', 'peniela@gmail.com', 'BMW', '2025-04-24', '00:00:00', 'En attente'),\
+(32, 'Calih', 'Calih@gmail.com', 'Audi A3', '2025-04-25', '00:00:00', 'En attente'),\
+(33, 'Calih', 'Calih@gmail.com', 'Audi A3', '2025-04-25', '00:00:00', 'En attente'),\
+(34, 'Calih', 'Calih@gmail.com', 'Audi A3', '2025-04-25', '00:00:00', 'En attente'),\
+(35, 'Calih', 'Calih@gmail.com', 'Audi A3', '2025-04-25', '00:00:00', 'En attente'),\
+(36, 'anwell', 'antsolalainaanwell@gmail.com', 'Audi A3', '2025-04-25', '00:00:00', 'En attente'),\
+(37, 'Anwell', 'antsolalainaanwell@gmail.com', 'Audi A3', '2025-04-24', '00:00:00', 'En attente'),\
+(38, 'anwell', 'antsolalainaanwell@gmail.com', 'Audi A3', '2025-04-24', '00:00:00', 'En attente'),\
+(39, 'anwell', 'antsolalainaanwell@gmail.com', 'Audi A3', '2025-04-24', '00:00:00', 'En attente'),\
+(40, 'Jean', 'jean@gmail.com', 'Audi A3', '2025-04-24', '00:00:00', 'En attente'),\
+(41, 'Ethan', 'ethan@gmail.com', 'Audi A3', '2025-04-17', '00:00:00', 'En attente'),\
+(42, 'Eliah', 'eliah@gmail.com', 'Audi A3', '2025-04-24', '00:00:00', 'En attente'),\
+(43, 'Eliah', 'eliah@gmail.com', 'Audi A3', '2025-04-25', '00:00:00', 'En attente'),\
+(52, 'Landy', 'landy@gmail.com', 'Mercedes 300 SL', '2025-04-24', '00:00:00', 'En attente'),\
+(53, 'Landy', 'landy@gmail.com', 'Mercedes 300 SL', '2025-04-24', '00:00:00', 'En attente'),\
+(54, 'Anwell', 'antsolalainaanwell@gmail.com', 'Audi A3', '2025-04-24', '00:00:00', 'En attente'),\
+(55, 'Eddia', 'eddia@gmail.com', 'BMW X5', '2025-04-24', '00:00:00', 'En attente'),\
+(56, 'Karol', 'karol@gmail.com', 'BMW M3', '2025-04-17', '13:00:00', 'En attente'),\
+(57, 'Claudia', 'claudia@gmail.com', 'Audi A3', '2025-04-24', '17:30:00', 'En attente'),\
+(58, 'Anwell', 'antsolalainaanwell@gmail.com', 'BMW X5', '2025-04-23', '12:23:00', 'En attente'),\
+(59, 'Kelii', 'Keliiiiii@gmail.com', 'BMW M3', '2025-04-22', '12:30:00', 'En attente'),\
+(60, 'Anwell', 'antsolalainaanwell@gmail.com', 'BMW X5', '2025-04-24', '15:45:00', 'En attente'),\
+(61, 'Anwell', 'antsolalainaanwell@gmail.com', 'BMW X5', '2025-04-24', '15:43:00', 'En attente'),\
+(62, 'Anwell', 'dimby@gmail.com', 'BMW X5', '2025-04-24', '13:30:00', 'En attente'),\
+(63, 'Anwell', 'antsolalainaanwell@gmail.com', 'Audi A3', '2025-04-24', '18:00:00', 'En attente'),\
+(64, 'Anwell', 'antsolalainaanwell@gmail.com', 'BMW X5', '2025-04-18', '13:30:00', 'En attente');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `inscription`\
+--\
+\
+CREATE TABLE `inscription` (\
+  `idclient` int(20) NOT NULL,\
+  `nom` varchar(100) NOT NULL,\
+  `email` varchar(100) NOT NULL,\
+  `password` varchar(100) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;\
+\
+--\
+-- Dumping data for table `inscription`\
+--\
+\
+INSERT INTO `inscription` (`idclient`, `nom`, `email`, `password`) VALUES\
+(1, 'Anwell', 'antsolalainaanwell@gmail.com', '1234'),\
+(2, 'Monsieur', 'monsieur@gmail.com', '1234'),\
+(3, 'Eddia', 'eddia@gmail.com', '2222'),\
+(4, 'Kenny', 'kenny@gmail.com', '1234'),\
+(5, 'Kenny', 'kenny@gmail.com', '2222'),\
+(6, 'Volavo', 'volavo@gmail.com', '1000'),\
+(7, 'vont', 'vony@gmail.com', '0000'),\
+(8, 'Parish', 'votavo@gmail.com', '6666'),\
+(9, 'Peniela', 'peniela@gmail.com', '1234'),\
+(10, 'Doudou', 'doudou@gmail.com', '2222'),\
+(11, 'Karol', 'karol@gmail.com', '6666'),\
+(12, 'samil', 'samil@gmail.com', '1234');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `login_admin`\
+--\
+\
+CREATE TABLE `login_admin` (\
+  `id_admin` int(10) NOT NULL,\
+  `nom_utilisateur` varchar(100) NOT NULL,\
+  `password` int(100) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;\
+\
+--\
+-- Dumping data for table `login_admin`\
+--\
+\
+INSERT INTO `login_admin` (`id_admin`, `nom_utilisateur`, `password`) VALUES\
+(1, 'ATLAS', 1234);\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `service`\
+--\
+\
+CREATE TABLE `service` (\
+  `id_service` int(20) NOT NULL,\
+  `libell\'e9` varchar(100) NOT NULL,\
+  `description` varchar(8000) NOT NULL,\
+  `image` varchar(100) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;\
+\
+--\
+-- Dumping data for table `service`\
+--\
+\
+INSERT INTO `service` (`id_service`, `libell\'e9`, `description`, `image`) VALUES\
+(1, 'Conseiller', 'On dispose d\'92un personnel comp\'e9tent capable de guider les clients sur les caract\'e9ristiques, les fonctionnalit\'e9s et les meilleures pratiques du v\'e9hicule .En comprenant les besoins et les pr\'e9f\'e9rences des clients, on recommande des v\'e9hicules adapt\'e9s et fournit des conseils sur l entretien, les options de financement et les garanties.', 'conseils.jpg'),\
+(2, 'Livraison', 'On dispose d un service de livraison qui nous permet de faire livrer directement votre voiture \'e0 votre domicile sans avoir \'e0 vous d\'e9placer, c est possible gr\'e2ce \'e0 SuperCar!Fixez le jour, l heure et le lieu de la livraison, le professionnel se charge du reste.Le prix d\'e9pend de la voiture et de la distance entre votre adresse et le lieu o\'f9 se trouve la voiture.', 'livrer.jpg'),\
+(3, 'Recommandation de pi\'e8ces', 'Supercar figure parmis les leaders en ligne pour la recommandation des pi\'e8ces d\'e9tach\'e9es pour automobiles. Vous aurez acc\'e8s \'e0 des milliers de pi\'e8ces et d accessoires adapt\'e9s \'e0 de nombreux v\'e9hicules.Parmi le large \'e9ventail de pi\'e8ces, on retrouve des syst\'e8mes de freinage, des pi\'e8ces de carrpsserie, des amortisseurs, des syst\'e8mes d \'e9chappement, des embrayages, des pi\'e8ces pour l int\'e9rieur, des \'e9quipements de climatisation et de chauffage et bien plus encore.', 'pi\'e8ces.jpeg');\
+\
+-- --------------------------------------------------------\
+\
+--\
+-- Table structure for table `voiture`\
+--\
+\
+CREATE TABLE `voiture` (\
+  `id_voiture` int(100) NOT NULL,\
+  `marque` varchar(100) NOT NULL,\
+  `mod\'e8le` varchar(100) NOT NULL,\
+  `prix` varchar(100) NOT NULL,\
+  `description` text NOT NULL,\
+  `image` varchar(100) NOT NULL\
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;\
+\
+--\
+-- Dumping data for table `voiture`\
+--\
+\
+INSERT INTO `voiture` (`id_voiture`, `marque`, `mod\'e8le`, `prix`, `description`, `image`) VALUES\
+(1, 'BMW', 'BMW X5', '140000', 'Kilom\'e9trage : 0 km (neuve)\\r\\nVitesse maximale : 250 km/h\\r\\nMotorisation : Hybride rechargeable\\r\\nPuissance : 245 ch\\r\\nConsommation : 1.5 L/100 km\\r\\nAutonomie \'e9lectrique : 70 km', 'BMWX5.jpg'),\
+(2, 'BMW', 'BMW I8', '45000', 'Kilom\'e9trage : 0 km (neuve)\\r\\nVitesse maximale : 250 km/h\\r\\nMotorisation : Hybride rechargeable\\r\\nPuissance : 245 ch\\r\\nConsommation : 1.5 L/100 km\\r\\nAutonomie \'e9lectrique : 70 km', 'BMW_i8.jpg'),\
+(3, 'BMW', 'BMW M3', '60000', 'Kilom\'e9trage : 0 km (neuve)\\r\\nVitesse maximale : 250 km/h\\r\\nMotorisation : Hybride rechargeable\\r\\nPuissance : 245 ch\\r\\nConsommation : 1.5 L/100 km\\r\\nAutonomie \'e9lectrique : 70 km', 'BMW_M3.jpg'),\
+(4, 'BMW', 'BMW S\'e9rie 2', '55000', 'Kilom\'e9trage : 0 km (neuve)\\r\\nVitesse maximale : 250 km/h\\r\\nMotorisation : Hybride rechargeable\\r\\nPuissance : 245 ch\\r\\nConsommation : 1.5 L/100 km\\r\\nAutonomie \'e9lectrique : 70 km', '2018-bmw-2-series-34.jpg'),\
+(5, 'Mercedes-Benz', 'Mercedes Classe 2', '40000', 'Kilom\'e9trage : 0 km (neuve)\\r\\nVitesse maximale : 250 km/h\\r\\nMotorisation : Hybride rechargeable\\r\\nPuissance : 245 ch\\r\\nConsommation : 1.5 L/100 km\\r\\nAutonomie \'e9lectrique : 70 km', 'mercedes.jpg'),\
+(6, 'Mercedes-Benz', 'Mercedes 300 SL', '48000', 'Kilom\'e9trage : 0 km (neuve)\\r\\nVitesse maximale : 250 km/h\\r\\nMotorisation : Hybride rechargeable\\r\\nPuissance : 245 ch\\r\\nConsommation : 1.5 L/100 km\\r\\nAutonomie \'e9lectrique : 70 km', 'Mercedes-Benz-300-SL.jpg'),\
+(7, 'Mercedes-Benz', 'Mercedes-Benz SUV', '52000', 'Kilom\'e9trage : 0 km (neuve)\\r\\nVitesse maximale : 250 km/h\\r\\nMotorisation : Hybride rechargeable\\r\\nPuissance : 245 ch\\r\\nConsommation : 1.5 L/100 km\\r\\nAutonomie \'e9lectrique : 70 km', 'Mercedes-Benz-SUV-GLB.jpg'),\
+(8, 'Mercedes-Benz', 'Mercedes Classe A ', '80000', 'Kilom\'e9trage : 0 km (neuve)\\r\\nVitesse maximale : 250 km/h\\r\\nMotorisation : Hybride rechargeable\\r\\nPuissance : 245 ch\\r\\nConsommation : 1.5 L/100 km\\r\\nAutonomie \'e9lectrique : 70 km', 'merce classe a.jpg'),\
+(9, 'Audi', 'Audi A6 2019', '100000', 'Kilom\'e9trage : 0 km (neuve)\\r\\nVitesse maximale : 250 km/h\\r\\nMotorisation : Hybride rechargeable\\r\\nPuissance : 245 ch\\r\\nConsommation : 1.5 L/100 km\\r\\nAutonomie \'e9lectrique : 70 km', 'A6 2019.jpg'),\
+(10, 'Audi', 'Audi A4 2017', '80000', 'Kilom\'e9trage : 0 km (neuve)\\r\\nVitesse maximale : 250 km/h\\r\\nMotorisation : Hybride rechargeable\\r\\nPuissance : 245 ch\\r\\nConsommation : 1.5 L/100 km\\r\\nAutonomie \'e9lectrique : 70 km', 'Audi-A4-2017.jpg'),\
+(11, 'Audi', 'Audi e-Tron GT', '90000', 'Kilom\'e9trage : 0 km (neuve)\\r\\nVitesse maximale : 250 km/h\\r\\nMotorisation : Hybride rechargeable\\r\\nPuissance : 245 ch\\r\\nConsommation : 1.5 L/100 km\\r\\nAutonomie \'e9lectrique : 70 km', 'Audi-e-tron-GT.jpg'),\
+(12, 'Audi', 'Audi R8 2024', '199000', 'Kilom\'e9trage : 0 km (neuve)\\r\\nVitesse maximale : 250 km/h\\r\\nMotorisation : Hybride rechargeable\\r\\nPuissance : 245 ch\\r\\nConsommation : 1.5 L/100 km\\r\\nAutonomie \'e9lectrique : 70 km', 'Audi-R8-V10-2024.jpg');\
+\
+--\
+-- Indexes for dumped tables\
+--\
+\
+--\
+-- Indexes for table `contact`\
+--\
+ALTER TABLE `contact`\
+  ADD PRIMARY KEY (`id`);\
+\
+--\
+-- Indexes for table `essai`\
+--\
+ALTER TABLE `essai`\
+  ADD PRIMARY KEY (`id`);\
+\
+--\
+-- Indexes for table `inscription`\
+--\
+ALTER TABLE `inscription`\
+  ADD PRIMARY KEY (`idclient`);\
+\
+--\
+-- Indexes for table `login_admin`\
+--\
+ALTER TABLE `login_admin`\
+  ADD PRIMARY KEY (`id_admin`);\
+\
+--\
+-- Indexes for table `service`\
+--\
+ALTER TABLE `service`\
+  ADD PRIMARY KEY (`id_service`);\
+\
+--\
+-- Indexes for table `voiture`\
+--\
+ALTER TABLE `voiture`\
+  ADD PRIMARY KEY (`id_voiture`);\
+\
+--\
+-- AUTO_INCREMENT for dumped tables\
+--\
+\
+--\
+-- AUTO_INCREMENT for table `contact`\
+--\
+ALTER TABLE `contact`\
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;\
+\
+--\
+-- AUTO_INCREMENT for table `essai`\
+--\
+ALTER TABLE `essai`\
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;\
+\
+--\
+-- AUTO_INCREMENT for table `inscription`\
+--\
+ALTER TABLE `inscription`\
+  MODIFY `idclient` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;\
+\
+--\
+-- AUTO_INCREMENT for table `login_admin`\
+--\
+ALTER TABLE `login_admin`\
+  MODIFY `id_admin` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;\
+\
+--\
+-- AUTO_INCREMENT for table `service`\
+--\
+ALTER TABLE `service`\
+  MODIFY `id_service` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;\
+\
+--\
+-- AUTO_INCREMENT for table `voiture`\
+--\
+ALTER TABLE `voiture`\
+  MODIFY `id_voiture` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;}
